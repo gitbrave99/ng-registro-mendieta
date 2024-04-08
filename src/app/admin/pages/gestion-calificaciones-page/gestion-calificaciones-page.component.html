@@ -1,0 +1,707 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <div class="form-check form-check-inline">
+                    <h4 class="card-title">Lista de grados</h4>
+                    &nbsp;&nbsp;
+                    <!-- <ul class="nav nav-tabs" data-tabs="tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="notas.html" data-toggle="tab" id="printBoletNotas">
+                                                <i class="material-icons">print</i> Imprimir
+                                                <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+                                        </ul> -->
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <!-- <div class="col-12 col-sm-12 col-md-6">
+                                        <div class="form-group bmd-form-group">
+                                            <label class="bmd-label-floating">Buscar</label>
+                                            <input type="text" class="form-control" id="buscarTeacher"
+                                                placeholder="Buscar Profesor">
+                                        </div>
+                                    </div> -->
+                </div>
+                <div class="table-responsive tableFixHead">
+                    <table class="table table-hover" id="tblistGrados">
+                        <thead class="card-header-primary">
+                            <tr>
+                                <th scope="col" class="text-center text-white">
+                                    Grado
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Sección
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Encargado
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Cantidad
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Acción
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" id="pnllisStudents">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-primary">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 id="gradoSelectedbladminalgo" class="text-center"></h3>
+                    </div>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <!-- <h4 class="card-title " id="">General A</h4> -->
+                    <h4 class="card-title">Registro de notas</h4>
+                    &nbsp;&nbsp;
+                    <!-- <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="modal"
+                                                data-target="#mdPrintNotasMatInAll" id="printBoletNotas">
+                                                <i class="material-icons">print</i> Imprimir
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                    </ul> -->
+
+                </div>
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <span class="nav-tabs-title">Materias:</span>
+                        <ul class="nav nav-tabs" data-tabs="tabs" id="listMateriasCal">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#msociales" data-toggle="tab">
+                                    Estudios Sociales
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mciencatec" data-toggle="tab">
+                                    Ciencia y Tecnología
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="tabMatematica">
+                                <a class="nav-link" href="#mmatematica" data-toggle="tab">
+                                    Matemáticas
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="tabmlenguaje">
+                                <a class="nav-link" href="#mlenguaje" data-toggle="tab">
+                                    Lenguaje
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="tabedFisica">
+                                <a class="nav-link" href="#medfisica" data-toggle="tab">
+                                    Educación Física
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="tabmoral">
+                                <a class="nav-link" href="#mmoralurb" data-toggle="tab">
+                                    Moral, Urbanidad y Cívica
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="tabingles">
+                                <a class="nav-link" href="#mingles" data-toggle="tab">
+                                    Inglés
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="tabedArtistica">
+                                <a class="nav-link" href="#medartistica" data-toggle="tab">
+                                    Educación Artística
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="msociales">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control" id="buscarEstInSociales"
+                                                        placeholder="Buscar en Sociales" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxReporScociales">
+                            <table class="table table-hover table-bordered" id="tbListCalAlSociales">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="mciencatec">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control" id="buscarEstInLenguaje"
+                                                        placeholder="Buscar en Ciencia y Tecnología" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxReporLenguaje">
+                            <table class="table table-hover table-bordered" id="tbListCalAlCiencias">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+
+                                    </tr>
+                                    <tr>
+
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="mmatematica">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control"
+                                                        id="buscarEstInMatematica"
+                                                        placeholder="Buscar en Matemáticas" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxReporMatematica">
+                            <table class="table table-hover table-bordered" id="tbListCalAlMatematica">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+
+                                    </tr>
+                                    <tr>
+
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="mlenguaje">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control" id="buscarEstInLenguaje"
+                                                        placeholder="Buscar en Lenguaje" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxReporLenguaje">
+                            <table class="table table-hover table-bordered" id="tbListCalAlLenguaje">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="medfisica">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control" id="buscarEstInEdFisica"
+                                                        placeholder="Buscar en Educacion Física" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxReporIngles">
+                            <table class="table table-hover table-bordered" id="tbListCalAlEdFisica">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+
+                                    </tr>
+                                    <tr>
+
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="mmoralurb">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control"
+                                                        id="buscarEstInInMoralRubcivica"
+                                                        placeholder="Buscar en Moral, Urbanidad y Cívica" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxmoral">
+                            <table class="table table-hover table-bordered" id="tbListCalAlMoralUrbCivica">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="mingles">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control" id="buscarInIngles"
+                                                        placeholder="Buscar en Inglés" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxingles">
+                            <table class="table table-hover table-bordered" id="tbListCalAlIngles">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="medartistica">
+                        <div class="row">
+                            <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="bmd-label-floating">Buscar</label>
+                                                    <input type="text" class="form-control"
+                                                        id="buscarEstInSeminario"
+                                                        placeholder="Buscar en Artística" />
+                                                </div>
+                                            </div> -->
+                        </div>
+                        <div class="table-responsive tableFixHead" id="boxartistica">
+                            <table class="table table-hover table-bordered" id="tbListCalAlArtistica">
+                                <thead class="card-header-primary">
+                                    <tr>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-white">
+                                            Estudiante
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            1° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            2° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="5" class="text-center text-white">
+                                            3° Trimestre
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Nota Final
+                                        </th>
+                                        <th scope="col" colspan="1" rowspan="2" class="text-center text-white">
+                                            Asistencia Final
+                                        </th>
+                                        <th scope="col" colspan="2" rowspan="2" class="text-center text-white">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">35%</th>
+                                        <th scope="col" class="text-center text-white">30%</th>
+                                        <th scope="col" class="text-center text-white"><span>Total
+                                                Trimestre</span></th>
+                                        <th scope="col" class="text-center text-white">
+                                            <span>Asistencia</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-md-gestion-nota/>
+
+<app-md-gestion-asistencia/>
+
+<app-md-gestion-nota-recuperacion/>
+
+<app-md-gestion-conducta/>

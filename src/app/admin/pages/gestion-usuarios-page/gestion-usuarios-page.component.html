@@ -1,0 +1,801 @@
+<div class="row">
+    <div class="col-md-12" id="materiasNotasEstu">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-primary">
+                <div class="form-check form-check-inline" id="panelsUsers">
+                    <h4 class="card-title">Usuarios</h4>
+                    &nbsp;&nbsp;
+                    <!-- <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="notas.html" data-toggle="modal"
+                                                data-target="#mdPrintNotasMatInAll" id="printBoletNotas">
+                                                <i class="material-icons">print</i> Imprimir
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                    </ul> -->
+                </div>
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <span class="nav-tabs-title">Tipo:</span>
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#mAdminreg" data-toggle="tab" id="tabbAdmin">
+                                    Administrador
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mdDocentReg" data-toggle="tab" id="tabbTeache">
+                                    Docente
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mdEstudentReg" data-toggle="tab" id="tabbStudent">
+                                    Estudiante
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body" style="margin-top: 20px">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="mAdminreg">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form id="formIngresoAdmin" name="formIngresoAdmin">
+                                    <div class="row">
+                                        <input type="hidden" name="data" id="data" />
+                                        <input type="hidden" name="dataadmin" id="dataadmin" />
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Nombre</b></label>
+                                                <input type="text" class="form-control" id="nombreAdmin"
+                                                    name="nombreAdmin" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Teléfono</b></label>
+                                                <input type="text" class="form-control" id="telefonoAdmin"
+                                                    name="telefonoAdmin" maxlength="8" min="8" pattern="^\d{8}$"
+                                                    title="Ingresa un número de teléfono válido Ejemplo: 24789685"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>E-mail</b></label>
+                                                <input type="email" class="form-control" id="emailAdmin"
+                                                    name="emailAdmin" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>DUI</b></label>
+                                                <input type="text" class="form-control" id="duiAdmin" name="duiAdmin"
+                                                    required title="Dui sin guiones" minlength="9" maxlength="9"
+                                                    pattern="^\d{9}$"
+                                                    title="Ingresa un DUI válido Ejemplo: 078459687" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Género</b></label>
+                                                <select name="generoAdmin" id="generoAdmin" class="form-control"
+                                                    required>
+                                                    <option value="null" disabled selected>
+                                                        Seleccione
+                                                        uno
+                                                    </option>
+                                                    <option value="Masculino">
+                                                        Masculino
+                                                    </option>
+                                                    <option value="Femenino">
+                                                        Femenino
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Usuario</b></label>
+                                                <input type="text" class="form-control" id="usuarioAdmin"
+                                                    name="usuarioAdmin" minlength="5" maxlength="12"
+                                                    pattern="^[A-Za-z0-9\-]{5,12}$"
+                                                    title="Ingresa caracteres alfanuméricos y guiones" disabled />
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label
+                                                                    class="bmd-label-floating"><b>Contraseña</b></label>
+                                                                <input type="email" class="form-control"
+                                                                    id="passStudent" required />
+                                                            </div>
+                                                        </div> -->
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary pull-left" id="btnRegisAdmin">
+                                        Registrar
+                                    </button>
+                                    <button type="button" class="btn btn-warning pull-left btndisabled"
+                                        id="btnActulizarAdmin" disabled>
+                                        Actualizar
+                                    </button>
+                                    <button type="button" class="btn btn-danger pull-left btndisabled"
+                                        id="btnCancelActualizarAdmin" disabled>
+                                        Cancelar
+                                    </button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                            <!-- col perfil para fonot  -->
+
+                            <div class="col-12 col-md-12" id="tblistAdmisRegistered">
+                                <div class="mt-4">
+                                    <div class="card-header card-header-primary">
+                                        <div class="form-check form-check-inline" id="materiasNotasEstu">
+                                            <h4 class="card-title">
+                                                Administradores
+                                            </h4>
+                                            &nbsp;&nbsp;
+                                            <!-- <ul class="nav nav-tabs" data-tabs="tabs">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="notas.html"
+                                                                        data-toggle="tab" id="printBoletNotas">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary"
+                                                                            id="btnEstudiante" data-dismiss="modal"
+                                                                            onclick="">
+                                                                            <i class="material-icons">print</i>
+                                                                        </button>
+                                                                    </a>
+                                                                </li>
+                                                            </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="bmd-label-floating">Buscar</label>
+                                                            <input type="text" class="form-control"
+                                                                id="buscarAdminRg"
+                                                                placeholder="Buscar administrador" />
+                                                        </div>
+                                                    </div> -->
+                                </div>
+                                <div class="table-responsive tableFixHead">
+                                    <!-- TABLE FOR ADMINS REGISTRADOS -->
+                                    <table class="table table-hover table-bordered" id="tableAdminRegs">
+                                        <thead class="card-header-primary text-center text-white">
+                                            <tr>
+                                                <th class="text-center text-white">
+                                                    Nombre
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Correo
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Sexo
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    DUI
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Teléfono
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Usuario
+                                                </th>
+
+                                                <th class="text-center text-white">
+                                                    Acción
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="mdDocentReg">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form id="frmIngresoDocente">
+                                    <input type="hidden" name="datadocente" id="datadocente" />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Nombre</b></label>
+                                                <input type="text" class="form-control" id="nombreDocente"
+                                                    name="nombreDocente" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Teléfono</b></label>
+                                                <input type="text" class="form-control" id="telefonoDocente"
+                                                    name="telefonoDocente" minlength="8" maxlength="8" pattern="^\d{8}$"
+                                                    title="Ingresa un número de teléfono válido Ejemplo: 24789685"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Email</b></label>
+                                                <input type="email" class="form-control" id="emailDocente"
+                                                    name="emailDocente" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>DUI</b></label>
+                                                <input type="text" class="form-control" id="duiDocente"
+                                                    name="duiDocente" minlength="9" maxlength="9" pattern="^\d{9}$"
+                                                    title="Ingresa un DUI válido Ejemplo: 078459687" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Nip</b></label>
+                                                <input type="text" class="form-control" id="nipDocente"
+                                                    name="nipDocente" minlength="8" maxlength="8" pattern="^\d{8}$"
+                                                    title="Ingresa un NIP válido Ejemplo: 78058798" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Género</b></label>
+                                                <select name="generoDocente" id="generoDocente" class="form-control"
+                                                    required>
+                                                    <option value="null" disabled selected>
+                                                        Seleccione
+                                                        uno
+                                                    </option>
+                                                    <option value="Masculino">
+                                                        Masculino
+                                                    </option>
+                                                    <option value="Femenino">
+                                                        Femenino
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Usuario</b></label>
+                                                <input type="text" class="form-control" id="usuarioDocente"
+                                                    minlength="5" maxlength="12" required minlength="5" maxlength="12"
+                                                    pattern="^[A-Za-z0-9\-]{5,12}$"
+                                                    title="Ingresa caracteres alfanuméricos y guiones" disabled />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-12">
+                                            <div class="text-center">
+                                                <h5>
+                                                    <b>Grado
+                                                        responsable</b>
+                                                </h5>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group bmd-form-group is-filled">
+                                                <label for="selectForPeriodos"
+                                                    class="bmd-label-static"><b>Grado</b></label>
+                                                <select class="form-control selectItems" id="selectListGradoResponsable"
+                                                    name="selectListGradoResponsable" required>
+                                                    <option value="null" selected disabled>
+                                                        Seleccione
+                                                        uno
+                                                    </option>
+                                                    <option value="null" selected disabled>
+                                                        Ninguno
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="totalMateriasReg" id="totalMateriasReg" />
+
+                                    <div class="row mt-4">
+                                        <div class="col-md-12">
+                                            <div class="text-center">
+                                                <h5>
+                                                    <b>Grados
+                                                        y
+                                                        Materias</b>
+                                                </h5>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="form-group bmd-form-group is-filled">
+                                                <label for="selectForPeriodos"
+                                                    class="bmd-label-static"><b>Grado</b></label>
+                                                <select class="form-control selectItems" id="slcGradoDarMateria"
+                                                    name="slcGradoDarMateria" required>
+                                                    <option value="null" disabled selected>
+                                                        Seleccione
+                                                        uno
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group bmd-form-group is-filled">
+                                                <label for="selectForPeriodos"
+                                                    class="bmd-label-static"><b>Materia</b></label>
+                                                <select class="form-control selectItems" id="selcMateriaDarDocente"
+                                                    name="selcMateriaDarDocente" required>
+                                                    <option value="null" disabled selected>
+                                                        Seleccione
+                                                        uno
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-primary" id="btnSelecMateraiDar">
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive tableFixHead">
+                                                <!-- TABLE FOR DOCENTES REGISTRADOS -->
+                                                <table class="table table-hover table-bordered"
+                                                    id="tableListMateriasDocente">
+                                                    <thead class="card-header-primary text-center text-white">
+                                                        <tr>
+                                                            <th class="text-center text-white">
+                                                                Grado
+                                                            </th>
+                                                            <th class="text-center text-white">
+                                                                Materia
+                                                            </th>
+                                                            <th class="text-center text-white">
+                                                                Acción
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary pull-left" id="btnRegisDocente">
+                                        Registrar
+                                    </button>
+                                    <button type="button" class="btn btn-warning pull-left btndisabled"
+                                        id="btnActulizarDocente" disabled>
+                                        Actualizar
+                                    </button>
+                                    <button type="button" class="btn btn-danger pull-left btndisabled"
+                                        id="btnCancelActualizarDocente" disabled>
+                                        Cancelar
+                                    </button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                            <!-- col perfil para fonot  -->
+
+                            <div class="col-12 col-md-12" id="tblistAdmisRegistered">
+                                <div class="mt-4">
+                                    <div class="card-header card-header-primary mt-4">
+                                        <div class="form-check form-check-inline" id="materiasNotasEstu">
+                                            <h4 class="card-title">
+                                                Docentes
+                                            </h4>
+                                            &nbsp;&nbsp;
+                                            <!-- <ul class="nav nav-tabs" data-tabs="tabs">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="notas.html"
+                                                                        data-toggle="tab" id="printBoletNotas">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary"
+                                                                            id="btnEstudiante" data-dismiss="modal"
+                                                                            onclick="">
+                                                                            <i class="material-icons">print</i>
+                                                                        </button>
+                                                                    </a>
+                                                                </li>
+                                                            </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="bmd-label-floating">Buscar</label>
+                                                            <input type="text" class="form-control"
+                                                                id="buscarDocente" placeholder="Buscar docente" />
+                                                        </div>
+                                                    </div> -->
+                                </div>
+                                <div class="table-responsive tableFixHead">
+                                    <!-- TABLE FOR DOCENTES REGISTRADOS -->
+                                    <table class="table table-hover table-bordered" id="tableListDocentes">
+                                        <thead class="card-header-primary text-center text-white">
+                                            <tr>
+                                                <th class="text-center text-white">
+                                                    Nombre
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Correo
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Sexo
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    DUI
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Teléfono
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    NIP
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Usuario
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Grado
+                                                    Responsable
+                                                </th>
+                                                <th class="text-center text-white">
+                                                    Acción
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="mdEstudentReg">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form id="frmIngresoAlumno">
+                                    <input type="hidden" name="data" id="data" />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="" for="nombreAlumno"><b>Nombre</b></label>
+                                                <input type="text" class="form-control" value="" id="nombreAlumno"
+                                                    name="nombreAlumno" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="" for="apellidoAlumno"><b>Apellido</b></label>
+                                                <input type="text" class="form-control" value="" id="apellidoAlumno"
+                                                    name="apellidoAlumno" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="" for="nieAlumno"><b>Nie</b></label>
+                                                <input type="text" class="form-control" value="" id="nieAlumno"
+                                                    name="nieAlumno" pattern="^\d{8}$"
+                                                    title="Ingresa un NIE válido Ejemplo: 78459856" minlength="8"
+                                                    maxlength="8" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group bmd-form-group is-filled" id="fecha_llenadoestu">
+                                                <label class="" for="fechanNaciAlumno"><b>Fecha
+                                                        de
+                                                        nacimiento</b></label>
+                                                <input type="date" class="form-control" value="" id="fechanNaciAlumno"
+                                                    name="fechanNaciAlumno" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group bmd-form-group is-filled" id="fecha_llenadoestu">
+                                                <label class="" for="fechaIngresoAlumno"><b>Fecha
+                                                        de
+                                                        ingreso</b></label>
+                                                <input type="date" class="form-control" value="" id="fechaIngresoAlumno"
+                                                    name="fechaIngresoAlumno" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Usuario</b></label>
+                                                <input type="text" class="form-control" id="usuarioAlumno"
+                                                    name="usuarioAlumno" required minlength="5" maxlength="12"
+                                                    pattern="^[A-Za-z0-9\-]{5,12}$"
+                                                    title="Ingresa caracteres alfanuméricos y guiones" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Género</b></label>
+                                                <select name="generoAlumno" id="generoAlumno" class="form-control"
+                                                    required>
+                                                    <option value="1" disabled selected>
+                                                        Seleccione
+                                                        uno
+                                                    </option>
+                                                    <option value="Masculino">
+                                                        Masculino
+                                                    </option>
+                                                    <option value="Femenino">
+                                                        Femenino
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Estado</b></label>
+                                                <select name="estadoAlumno" id="estadoAlumno" class="form-control"
+                                                    required>
+                                                    <option value="" disabled selected>
+                                                        Seleccione
+                                                        uno
+                                                    </option>
+                                                    <option value="1">
+                                                        Activo
+                                                    </option>
+                                                    <option value="0">
+                                                        Inactivo
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Email</b></label>
+                                                <input type="email" class="form-control" id="emailAlumnoAlumno"
+                                                    name="emailAlumnoAlumno" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="text-center">
+                                                <h5>
+                                                    <b>Grado
+                                                        a
+                                                        cursar</b>
+                                                </h5>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group bmd-form-group is-filled">
+                                                <label for="selectForPeriodos"
+                                                    class="bmd-label-static"><b>Grado</b></label>
+                                                <select class="form-control selectItems" id="slcGradoCursarAlumno"
+                                                    required name="slcGradoCursarAlumno">
+                                                    <option value="null" selected disabled>
+                                                        Selecciona
+                                                        uno
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-12">
+                                            <div class="text-center">
+                                                <h5>
+                                                    <b>Datos
+                                                        del
+                                                        responsable</b>
+                                                </h5>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Nombre</b></label>
+                                                <input type="text" class="form-control" id="nombreResonsbleAlumno"
+                                                    name="nombreResonsbleAlumno" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>Teléfono</b></label>
+                                                <input type="text" class="form-control" id="telefonoResponsableAlumno"
+                                                    name="telefonoResponsableAlumno" minlength="8" maxlength="8"
+                                                    pattern="^\d{8}$"
+                                                    title="Ingresa un número de teléfono válido Ejemplo: 24789685"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class=""><b>DUI</b></label>
+                                                <input type="text" class="form-control" id="duiResponsableAlumno"
+                                                    name="duiResponsableAlumno" minlength="9" pattern="^\d{9}$"
+                                                    title="Ingresa un DUI válido Ejemplo: 078459687" maxlength="9"
+                                                    required />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary pull-left" id="btnRegisAlumno">
+                                        Registrar
+                                    </button>
+                                    <button type="button" class="btn btn-warning pull-left btndisabled"
+                                        id="btnActulizarAlumno" disabled>
+                                        Actualizar
+                                    </button>
+                                    <button type="button" class="btn btn-danger pull-left btndisabled"
+                                        id="btnCancelActualizarAlumno" disabled>
+                                        Cancelar
+                                    </button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                            <!-- col perfil para fonot  -->
+
+                            <div class="col-12 col-md-12" id="tblistAdmisRegistered">
+                                <div class="mt-4">
+                                    <div class="card-header card-header-primary mt-4">
+                                        <div class="form-check form-check-inline" id="materiasNotasEstu">
+                                            <h4 class="card-title">
+                                                Estudiantes
+                                            </h4>
+                                            &nbsp;&nbsp;
+                                            <!-- <ul class="nav nav-tabs" data-tabs="tabs">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="notas.html"
+                                                                        data-toggle="tab" id="printBoletNotas">
+                                                                        <button type="button"
+                                                                            class="btn btn-primary"
+                                                                            id="btnEstudiante" data-dismiss="modal"
+                                                                            onclick="">
+                                                                            <i class="material-icons">print</i>
+                                                                        </button>
+                                                                    </a>
+                                                                </li>
+                                                            </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="">Estado</label>
+                                            <select name="slcCargarListAlumnoActInact" id="slcCargarListAlumnoActInact"
+                                                class="form-control" required>
+                                                <option value="" disabled>
+                                                    Seleccione
+                                                    uno
+                                                </option>
+                                                <option value="1" selected>
+                                                    Activos
+                                                </option>
+                                                <option value="0">
+                                                    Inactivos
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group bmd-form-group is-filled">
+                                            <label for="selectListGradoalumnos"
+                                                class="bmd-label-static"><b>Grado</b></label>
+                                            <select class="form-control selectItems" id="selectListGradoalumnos"
+                                                name="selectListGradoalumnos" required>
+                                                <option value="null" selected disabled>
+                                                    Seleccione
+                                                    uno
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <!-- <div class="col-12 col-sm-12 col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="bmd-label-floating">Buscar</label>
+                                                            <input type="text" class="form-control"
+                                                                id="buscarDocente"
+                                                                placeholder="Buscar estudiante" />
+                                                        </div>
+
+                                                    </div> -->
+                                </div>
+                                <!-- TABLE FOR ESTUDIANTES REGISTRADOS -->
+                                <div class="table-responsive tableFixHead">
+                                    <table class="table table-hover table-bordered" id="tableAlumnosReg">
+                                        <thead class="card-header-primary">
+                                            <tr>
+                                                <th scope="col" class="text-center text-white">
+                                                    Nombre
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    NIE
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    Fecha
+                                                    de
+                                                    nacimiento
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    Fecha
+                                                    de
+                                                    ingreso
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    Sexo
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    Teléfono
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    Usuario
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    Responsable
+                                                </th>
+                                                <th scope="col" class="text-center text-white">
+                                                    DUI
+                                                </th>
+                                                <th>
+                                                    Accion
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col" id="containerTbUsers"></div>
+</div>
+

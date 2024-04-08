@@ -1,0 +1,32 @@
+<div class="modal fade" id="mdAgregarNotaRecuperacion" tabindex="-1" role="dialog" aria-labelledby="mdagrenotrecup"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="mdagrenotrecup">
+                    Agregar Nota De Recuperación
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="frmIngresoNotaRecuper" class="needs-validation">
+                    <input type="hidden" name="idalumnotarecu" id="idalumnotarecu">
+                 <input type="hidden" name="idmaterianotarecu" id="idmaterianotarecu">
+                    <div class="form-row">
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <label for="inNotaRecupera" class="">Nota</label>
+                            <input type="number" min="0.0" max="10" step="0.01" class="form-control"
+                                id="inNotaRecupera" required name="inNotaRecupera">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btnGuardarNotas" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

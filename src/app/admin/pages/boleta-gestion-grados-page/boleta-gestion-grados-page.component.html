@@ -1,0 +1,158 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <div class="form-check form-check-inline">
+                    <h4 class="card-title "></h4>
+                    &nbsp;&nbsp;
+                    <!-- <ul class="nav nav-tabs" data-tabs="tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="notas.html" data-toggle="tab"
+                                                    id="printBoletNotas">
+                                                    <div class="ripple-container"></div>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                        data-target="#mdAgregarGrado">
+                                                        <i class="material-icons">add
+                                                        </i>
+                                                        Agregar
+                                                    </button>
+
+                                                </a>
+                                            </li>
+                                        </ul> -->
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <!-- <div class="form-group">
+                                                <label class="bmd-label-floating">Buscar</label>
+                                                <input type="search" class="form-control" id="inputBuscarGrado" name="inputBuscarGrado"
+                                                    placeholder="Buscar Grado">
+                                            </div> -->
+                        <div class="form-group">
+                            <label class="">Estado</label>
+                            <select name="slcCargarListadoEStadoGrado" id="slcCargarListadoEStadoGrado"
+                                class="form-control" required>
+                                <option value="" disabled>Seleccione
+                                    uno</option>
+                                <option value="1" selected>Activos</option>
+                                <option value="0">Inactivos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive tableFixHead ">
+                    <table class="table table-hover table-bordered  " id="tblistGrados">
+                        <thead class="card-header-primary">
+                            <tr>
+                                <th scope="col" class="text-center text-white">
+                                    Grado
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Sección
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Encargado
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Cantidad
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Acción
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 id="gradoSelectedbl" class="text-center"></h3>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline" id="materiasNotasEstu">
+                    <h4 class="card-title">Estudiantes <span id="titleGradeSel"></span></h4>
+                    &nbsp;&nbsp;
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                            <a class="nav-link text-center" href="notas.html" data-toggle="tab" id="printBoletNotas">
+                                <button type="button" class="btn btn-primary" id="btnEstudiante"
+                                    onclick="printStudents()">
+                                    <i class="material-icons">print</i>
+                                    Imprimir</button>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body" id="pnllisStudents">
+                <div class="row">
+                    <!-- <div class="col-12 col-sm-12 col-md-6">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Buscar</label>
+                                                <input type="text" class="form-control" id="buscarStudent"
+                                                    placeholder="Buscar estudiante">
+                                            </div>
+                                        </div> -->
+                    <div class="table-responsive tableFixHead">
+                        <table class="table table-hover table-bordered" id="tblistAlumnos">
+                            <thead class="card-header-primary">
+                                <tr>
+                                    <th scope="col" class="text-center text-white">
+                                        Nombre
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        NIE
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        Fecha de nacimiento
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        Fecha de ingreso
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        Sexo
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        Teléfono
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        Usuario
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        Responsable
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        DUI
+                                    </th>
+                                    <th scope="col" class="text-center text-white">
+                                        Boleta
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-md-gestion-grado />
+
+<app-md-resumen-notas />

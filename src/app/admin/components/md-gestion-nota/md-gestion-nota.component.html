@@ -1,0 +1,56 @@
+<div class="modal fade" id="mdAgregarNota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                    Agregar nota
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="frmIngresoNotas" class="needs-validation">
+                    <div class="form-group bmd-form-group is-filled">
+                        <input type="hidden" name="mdNotasidmateria" id="mdNotasidmateria" value="">
+                        <input type="hidden" name="mdNotasidalumno" id="mdNotasidalumno" value="">
+                        <label for="selectForPeriodos" class="bmd-label-static">Elegir</label>
+                        <select class="form-control selectItems" name="slcTrimestreCalificacion"
+                            id="slcTrimestreCalificacion" required="">
+                            <option value="" selected disabled>
+                                Seleccione uno
+                            </option>
+                            <option value="1">I Trimestre</option>
+                            <option value="2">II Trimestre</option>
+                            <option value="3">III Trimestre</option>
+                        </select>
+                    </div>
+                    <div class="form-row" id="rwboxNotasStudent">
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <label for="inNota1Cal" class="">Nota 1 (35%)</label>
+                            <input type="number" min="0.0" max="10" step="0.01" class="form-control" id="inNota1Cal"
+                                required name="inNota1Cal">
+                        </div>
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <label for="inNota2Cal" class="">Nota 2 (35%)</label>
+                            <input type="number" min="0.0" max="10" step="0.01" class="form-control" id="inNota2Cal"
+                                required name="inNota2Cal">
+                        </div>
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <label for="inNota3Cal" class="">Nota 3 (30%)</label>
+                            <input type="number" min="0.0" max="10" step="0.01" class="form-control" id="inNota3Cal"
+                                required name="inNota3Cal">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btnGuardarNotas" class="btn btn-primary" data-nmmateria="Inglés"
+                            data-nmteacher="Nuria María Zabala Parra" data-nmstudent="Jeniffer Sarai Prudencio Lopez"
+                            data-idmaterysel="54eogRRVYoUBWqnqTE3o">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

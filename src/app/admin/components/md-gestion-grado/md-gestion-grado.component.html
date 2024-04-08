@@ -1,0 +1,57 @@
+
+<div class="modal fade" id="mdEditarGrado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                    Editar Grado
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="frmeditargrado" name="frmeditargrado" class="needs-validation">
+                    <input type="hidden" id="datagrado">
+                    <div class="form-group">
+                        <label for="inputEditgrado">Grado</label>
+                        <input type="text" class="form-control" id="inputEditgrado" disabled>
+                    </div>
+                    <div class="form-group ">
+                        <label for="slcEditSeccion" class="bmd-label-static">Sección</label>
+                        <select class="form-control selectItems" id="slcEditSeccion" disabled>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputReadProfEncargado">Encargado</label>
+                        <input type="text" class="form-control" name="inputReadProfEncargado"
+                            id="inputReadProfEncargado" disabled>
+                    </div>
+                    <div class="form-row" id="rwboxNotasStudent">
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <label for="inputEditCantidad" class="">Cantidad de alumnos</label>
+                            <input type="number" min="1" max="100" step="1" class="form-control" id="inputEditCantidad"
+                                name="inputEditCantidad" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="slcEstadoGrado" class="bmd-label-static">Estado</label>
+                        <select class="form-control selectItems" id="slcEstadoGrado" name="slcEstadoGrado">
+                            <option value="" disabled selected>Seleccione uno</option>
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btnGuardarNotas" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

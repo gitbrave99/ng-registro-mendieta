@@ -1,0 +1,83 @@
+<!-- MODAL AGREGAR NOTA PERIODOS  -->
+<div class="modal fade" id="mdPrevImpresion" tabindex="-1" role="dialog" aria-labelledby="albolnotas"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="albolnotas">Resumen de notas</h5>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">
+                    X
+                </button>
+            </div>
+            <div class="modal-body ">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col">
+                        <!-- <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <button class="btn btn-primary" href="#" id="printBoletNotasEstudiantex">
+                                    <i class="material-icons list-inline-item">print</i>
+                                    Imprimir
+                                    <div class="ripple-container"></div>
+                                </button>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <div class="col form-group">
+
+                        <label class="bmd-label-floating"></label>
+                        <select class="form-control" id="selectPreviewBoleta" required>
+                            <option value="1">I Trimestre</option>
+                            <option value="2">II Trimestre</option>
+                            <option value="3">III Trimestre</option>
+                            <option value="4">Cierre escolar</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 mr-3 ml-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="tbBoletaAsistencia">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center text-white bg-primary">Asistencia</td>
+                                    <td colspan="2" class="text-center">
+                                        <h5 class="font-weight-bold" id="valorAsistenciaTrim">%</h5>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <span hidden id="nmStudente"></span>
+                <div id="boxPrintNotasxStuden" class="text-center" style="padding-top: 20px;">
+                    <div class="table-responsive">
+                        <table class="table " id="tbBoletaPreview">
+                            <thead class="text-center bg-primary text-white">
+                                <th scope="col">Materia</th>
+                                <th scope="col">35%</th>
+                                <th scope="col">35%</th>
+                                <th scope="col">30%</th>
+                                <th scope="col">Total</th>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- tabla conducta -->
+                <div class="text-center" style="padding-top: 20px;">
+                    <div class="table-responsive">
+                        <table class="table " id="tbboletaConductas">
+                            <thead class="text-center bg-primary text-white">
+                                <tr>
+                                    <th scope="col" colspan="2">Conducta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

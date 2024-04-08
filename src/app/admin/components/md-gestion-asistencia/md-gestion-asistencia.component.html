@@ -1,0 +1,41 @@
+<div class="modal fade" id="mdAgregarAsistencia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                    Agregar Asistencia
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="frmIngresoAsistencia" class="needs-validation">
+                    <input type="hidden" name="mdidalumnoasis" id="mdidalumnoasis">
+                    <div class="form-group bmd-form-group is-filled">
+                        <label for="selectForPeriodos" class="bmd-label-static">Elegir</label>
+                        <select class="form-control selectItems" id="slcListTrimestreAsis" name="slcListTrimestreAsis"
+                            required>
+                            <option value="" selected disabled>Seleccione uno</option>
+                            <option value="1">I Trimestre</option>
+                            <option value="2">II Trimestre</option>
+                            <option value="3">III Trimestre</option>
+                        </select>
+                    </div>
+                    <div class="form-row" id="rwboxNotasStudent">
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <label for="inNota1" class=" ">Porcentaje (%)</label>
+                            <input type="number" min="0.0" max="100" step="0.01" class="form-control"
+                                id="txtPorcentAsis" name="txtPorcentAsis" required="true">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btnGuardarNotas" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

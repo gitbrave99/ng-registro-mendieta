@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <div class="form-check form-check-inline">
+                    <h4 class="card-title">Resumen de año lectivo </h4>
+                    &nbsp;&nbsp;
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row mt-4 b">
+                    <div class="col-md-6 no-gutters">
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <!-- <a class="btn btn-sm btn-primary text-white" data-toggle="modal"
+                                                    data-target="#mdConfirmIniciarYearEscolar"
+                                                    id="btnIniciarYearEscolar" >
+                                                    <i class="material-icons">lock_open</i> Iniciar año
+                                                    <div class="ripple-container"></div>
+                                                </a> -->
+                                <button type="button" disabled class="btn btn-sm btn-primary text-whit"
+                                    data-toggle="modal" data-target="#mdConfirmIniciarYearEscolar">
+                                    <i class="material-icons">lock_open</i> Iniciar año
+                                    <div class="ripple-container"></div>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-danger text-white" data-toggle="modal"
+                                    data-target="#mdConfirmCerrarYearEscolar" id="btnCierreYearEscolar">
+                                    <i class="material-icons">lock_outline</i> Cerrar año <div class="ripple-container">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-sm btn-dark border text-white" data-toggle="tab"
+                                    id="btnImprimirResumenFinal">
+                                    <i class="material-icons">print</i>Imprimir <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group bmd-form-group is-filled">
+                            <label for="selectListGradoDispon" class="bmd-label-static"><b>Grado</b></label>
+                            <select class="form-control selectItems" id="selectListGradoDispon"
+                                name="selectListGradoDispon" required>
+                                <option value="null" selected disabled>
+                                    Seleccione uno
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group bmd-form-group is-filled">
+                            <label for="selectListYears" class="bmd-label-static"><b>Año</b></label>
+                            <select class="form-control selectItems" id="selectListYears" name="selectListYears"
+                                required>
+                                <option value="null" selected disabled>
+                                    Seleccione uno
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="list-group">
+                            <li class="list-group-item  m-0 p-0">1- EVIDENCIA ACTITUDES FAVORABLES
+                                PARA LACONVIVENCIA Y CULTURA DE PAZ</li>
+                            <li class="list-group-item  m-0 p-0">2- ACEPTA Y VALORA LA DIVERSIDAD
+                            </li>
+                            <li class="list-group-item  m-0 p-0">3- TOMA DECISIONES DE FORMA
+                                AUTÓNOMA Y RESPONSABLE</li>
+                            <li class="list-group-item  m-0 p-0">4- SE EXPRESA Y PARTICIPA CON
+                                RESPETO</li>
+                            <li class="list-group-item  m-0 p-0">5- MUESTRA SENTIDO DE PERTENENCIA Y
+                                RESPETO POR NUESTRA CULTURA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-responsive tableFixHead">
+                    <table class="table table-hover" id="tableCierreEscolar">
+                        <thead class="card-header-primary">
+                            <tr id="cierreHeaderTable">
+                                <th scope="col" class="text-center text-white">
+                                    Estudiante
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    1
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    2
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    3
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    4
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    5
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Sociales
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Ciencias y Tecnología
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Matematicas
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Lenguaje
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Educación Física
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Moral, Urbanidad y Cívica
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Inglés
+                                </th>
+                                <th scope="col" class="text-center text-white">
+                                    Educación Artistica
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="cierreBodyTable">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

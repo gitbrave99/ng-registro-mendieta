@@ -1,0 +1,104 @@
+<div class="modal fade" id="mdAgregarConducta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="exampleModalLabelconduct">
+                    Agregar Conducta
+                </h5>
+                <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-dark">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="frmIngresoConducta" class="needs-validation" method="post">
+                    <input type="hidden" name="mdidalumConducta" id="mdidalumConducta">
+                    <div class="form-group bmd-form-group is-filled">
+                        <label for="selectForTrimestrsConducta" class="bmd-label-static">Elegir Trimestre</label>
+                        <select class="form-control selectItems" id="selectForTrimestrsConducta"
+                            name="selectForTrimestrsConducta" required>
+                            <option value="" disabled>Seleccione uno</option>
+                            <option value="1" selected>I Trimestre</option>
+                            <option value="2">II Trimestre</option>
+                            <option value="3">III Trimestre - Final</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row" id="rwboxNotasStudent">
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <span for="inNota3Cal" class="">Se Expresa y Participa Con Respeto</span>
+                            <div class="form-group bmd-form-group ">
+                                <select class="form-control selectItems" id="slcForseEypcr" name="slcForseEypcr"
+                                    required>
+                                    <option value="" selected disabled>Seleccione uno</option>
+                                    <option value="B">Bueno (B)</option>
+                                    <option value="MB">Muy Bueno (MB)</option>
+                                    <option value="E">Excelente (E)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <span for="inNota3Cal" class="">Muestra Sentido De Pertenencia y Respeto Por Nuestra
+                                Cultura</span>
+                            <div class="form-group bmd-form-group ">
+                                <select class="form-control selectItems" id="slcFormuestraSpypnc"
+                                    name="slcFormuestraSpypnc" required>
+                                    <option value="" selected disabled>Seleccione uno</option>
+                                    <option value="B">Bueno (B)</option>
+                                    <option value="MB">Muy Bueno (MB)</option>
+                                    <option value="E">Excelente (E)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4 bmd-form-group">
+                            <span for="inNota3Cal" class="text-bold">Toma Decisiones De Forma Autónoma y
+                                Responsable</span>
+                            <div class="form-group bmd-form-group ">
+                                <select class="form-control selectItems" id="slcFortomaDdfayr"
+                                    name="slcFortomaDdfayr" required>
+                                    <option value="" selected disabled>Seleccione uno</option>
+                                    <option value="B">Bueno (B)</option>
+                                    <option value="MB">Muy Bueno (MB)</option>
+                                    <option value="E">Excelente (E)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4 bmd-form-group align-top">
+                            <span for="inNota2Cal" class="">Acepta y Valora La Diversidad</span>
+                            <div class="form-group bmd-form-group ">
+
+                                <select class="form-control selectItems" id="slcForaceptaYvl" name="slcForaceptaYvl"
+                                    required>
+                                    <option value="" selected disabled>Seleccione uno</option>
+                                    <option value="B">Bueno (B)</option>
+                                    <option value="MB">Muy Bueno (MB)</option>
+                                    <option value="E">Excelente (E)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-8 bmd-form-group" style="height: 20px;">
+                            <span for="inNota1Cal" class="">Evidencia Actitudes Favorables Para La Convivencia y
+                                Cultura De Paz</span>
+                            <div class="form-group bmd-form-group ">
+                                <select class="form-control selectItems" id="slcForevidenciAfcycdlpaz"
+                                    name="slcForevidenciAfcycdlpaz" required>
+                                    <option value="" selected disabled>Seleccione uno</option>
+                                    <option value="B">Bueno (B)</option>
+                                    <option value="MB">Muy Bueno (MB)</option>
+                                    <option value="E">Excelente (E)</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer mt-4">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btnGuardarNotas" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

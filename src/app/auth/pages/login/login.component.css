@@ -1,0 +1,14 @@
+.selectBGDark {
+    background-color: #1a2035 !important;
+  }
+  
+  .imgLoginRec{
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 50%; 
+    max-height: 50%;
+  }
+  
+  .btndisabled{
+    cursor: not-allowed;
+  }

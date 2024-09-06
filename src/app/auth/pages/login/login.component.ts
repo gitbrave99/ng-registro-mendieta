@@ -11,14 +11,12 @@ import { AuthService } from '../../services/auth.service';
 export class AuthLoginPage {
 
   public loginMessage: string = "Usuario o contraseñas incorrectos";
-  public isLoggedIn: boolean = false;
+  public isLoggedIn: boolean = true;
 
   public myForm: FormGroup = this.formsBuilder.group({
-    email: ['ejemplo@gmail.cm', [Validators.required, Validators.email]],
-    password: ['clave', [Validators.required]]
+    email: ['Julio', [Validators.required]],
+    password: ['123', [Validators.required]]
   })
-
-
 
   constructor(
     private formsBuilder: FormBuilder,
@@ -64,23 +62,28 @@ export class AuthLoginPage {
       this.isLoggedIn = false;
       return;
     }
-
-    this.authService.login("IsaacGo","123").subscribe({
+    console.log("this.myForm.value ", this.myForm.value);
+    
+    this.authService.login(this.myForm.value.email,this.myForm.value.password).subscribe({
       next:(data)=>{
         console.log("data ", data);
-        
+        this.isLoggedIn = true;
+        this.router.navigateByUrl(`escuela/${this.authService.pathHomeUser}`);
+        // console.log("ruta: ", `escuela/${this.authService.pathHomeUser}`);
+      },error:(error)=>{
+        console.log("error LOGIN", error);  
+        this.isLoggedIn = false;
       }
     })
 
     // consumir servicio 
 
     // ERROR EN LOGIN CON EL SERVICIO
-    this.isLoggedIn = true;
-    this.loginMessage="mensaje de error login"
+    
+    // this.loginMessage="mensaje de error login"
 
     // EXITO EN LOGIN 
-    this.myForm.reset();
-    this.router.navigateByUrl('/escuela/estudiante/mi-perfil')
+    // this.myForm.reset();
   }
 
 }

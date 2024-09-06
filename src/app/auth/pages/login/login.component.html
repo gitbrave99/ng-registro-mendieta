@@ -58,10 +58,7 @@
                                     </div>
                                 </div> -->
                                 <div class="form-row justify-content-center">
-                                    <p 
-                                    class="text-danger"
-                                    *ngIf="isLoggedIn"
-                                    >{{loginMessage}}</p>
+                                    <p class="text-danger" *ngIf="!isLoggedIn">{{loginMessage}}</p>
                                 </div>
                             </form>
                         </div>

@@ -7,21 +7,17 @@
 
             <li 
             class="nav-item"
-            routerLink="/escuela/estudiante/mi-perfil"
-            routerLinkActive="active">
-                <a class="nav-link">
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            *ngFor="let item of menuList">
+                <a class="nav-link" style="cursor: pointer;">
                     <i class="material-icons">person</i>
-                    <p>Mi shared</p>
+                    <p>{{item.title}}</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="notas.html">
-                    <i class="material-icons">library_books</i>
-                    <p>Mis Notas</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="cerrarSesion" style="cursor: pointer;">
+                <a class="nav-link" id="cerrarSesion" style="cursor: pointer;"
+                (click)="logout()">
                     <i class="material-icons">logout</i>
                     <p>Cerrar sesión</p>
                 </a>

@@ -21,13 +21,11 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
     EstudianteModule,
     SharedModule
   ],
-  providers: [
-    {
-      provide:HTTP_INTERCEPTORS,
-      useClass:TokenInterceptor,
-      multi:true /// este pendiente de todas las peticiones
-    }
-  ],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,14 +9,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>Nombre</b></label>
-                        <input type="text" class="form-control" name="nombre" id="nombre"
+                        <input type="text" class="form-control" name="nombre" id="nombre" [value]="perfil.nombre"
                             disabled>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>Género</b></label>
-                        <input type="text" class="form-control" name="genero" id="genero"
+                        <input type="text" class="form-control" name="genero" id="genero" [value]="perfil.genero"
                             disabled>
                     </div>
                 </div>
@@ -25,14 +25,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>DUI</b></label>
-                        <input type="email" class="form-control" name="dui" id="dui"
+                        <input type="email" class="form-control" name="dui" id="dui" [value]="perfil.dui"
                             disabled>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>Email</b></label>
-                        <input type="email" class="form-control" name="email" id="email"
+                        <input type="email" class="form-control" name="email" id="email" [value]="perfil.email"
                             disabled>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>Nip</b></label>
-                        <input type="text" class="form-control" value=""
+                        <input type="text" class="form-control" [value]="perfil.nip"
                             name="nip" id="nip" disabled>
                     </div>
                 </div>
@@ -50,13 +50,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>Usuario</b></label>
-                        <input type="text" class="form-control" name="usuario" id="usuario" disabled>
+                        <input type="text" class="form-control" name="usuario" id="usuario" [value]="perfil.dtusuarioUsuario"
+                         disabled>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>Teléfono</b></label>
-                        <input type="text" class="form-control" name="telefono" id="telefono" disabled>
+                        <input type="text" class="form-control" name="telefono" id="telefono" [value]="perfil.telefono" disabled>
                     </div>
                 </div>
             </div>

@@ -1,41 +1,19 @@
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpInterceptorFn, HttpRequest } from '@angular/common/http';
-import { Observable, catchError, pipe, throwError } from 'rxjs';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpInterceptorFn, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export class TokenInterceptor implements HttpInterceptor {
-  
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    
-    const headers = new HttpHeaders({
-      'Autorization':"tokencillo"
-    })
-    //PRIMERA FORMA7
+  constructor() {}
 
-    let clonedRequest= req
-    if (localStorage.getItem('token')) {
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    let clonedRequest= req;
+    if (localStorage.getItem("tokenuser")) {
+      console.log("tokenuser",localStorage.getItem("tokenuser"));
+      
       clonedRequest= req.clone({
-        setHeaders:{Authorization:localStorage.getItem('token')!}
+        setHeaders:{Authorization:localStorage.getItem("tokenuser")!}
       })
     }
 
     return next.handle(clonedRequest)
-
-    //SEGUNDA FORMA
-    // no es necesario el headers:headers
-    const requestClone= req.clone({
-      headers
-    });
-    return next.handle(requestClone)
-    .pipe(
-      catchError(this.manejaError)
-    )
-
   }
-  
-  manejaError(error:HttpErrorResponse){
-    console.log("sucedió un error");
-    console.warn("error", error)
-    return throwError(()=>Error("new custom error"))
-  }
-
 };
-

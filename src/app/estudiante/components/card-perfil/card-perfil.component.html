@@ -9,14 +9,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="" for="nombreStudent"><b>Nombre</b></label>
-                        <input type="text" class="form-control" value="" name="nombreStudent" id="nombreStudent"
+                        <input type="text" class="form-control" [value]="estudiante.nombre" name="nombreStudent" id="nombreStudent"
                             disabled />
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="" for="NieStudent"><b>Nie</b></label>
-                        <input type="text" class="form-control" value="" name="NieStudent" id="NieStudent"
+                        <input type="text" class="form-control" [value]="estudiante.nie" name="NieStudent" id="NieStudent"
                             disabled />
                     </div>
                 </div>
@@ -27,7 +27,9 @@
                         <label class="" for="fechanNaciStudent"><b>Fecha de
                             nacimiento</b></label>
                         <input type="text" class="form-control" value=""
-                            name= "fechanNaciStudent" id="fechanNaciStudent" disabled />
+                            name= "fechanNaciStudent" id="fechanNaciStudent"
+                            [value]="estudiante.fecha_nacimiento"
+                            disabled />
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -35,7 +37,8 @@
                         <label class="" for="fechaIngresoEstudiante"><b>Fecha
                             de ingreso</b></label>
                         <input type="text" class="form-control" value=""
-                            name="fechaIngresoEstudiante" id="fechaIngresoEstudiante" disabled />
+                            name="fechaIngresoEstudiante" id="fechaIngresoEstudiante"
+                            [value]="estudiante.fecha_ingreso" disabled />
                     </div>
                 </div>
             </div>
@@ -43,7 +46,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class=""><b>Usuario</b></label>
-                        <input type="email" class="form-control" name="userStudent" id="userStudent"
+                        <input type="email" class="form-control" name="userStudent" id="userStudent" [value]="estudiante.dtusuarioUsuario"
                             disabled />
                     </div>
                 </div>
@@ -61,6 +64,7 @@
                     <div class="form-group">
                         <label class="" ><b>Nombre</b></label>
                         <input type="text" class="form-control" name="nombreResonsble" id="nombreResonsble"
+                        [value]="estudiante.encargado_nombre"
                             disabled />
                     </div>
                 </div>
@@ -68,6 +72,7 @@
                     <div class="form-group">
                         <label class=""><b>DUI</b></label>
                         <input type="text" class="form-control" name="duiResponsable" id="duiResponsable"
+                        [value]="estudiante.encargado_dui"
                             disabled />
                     </div>
                 </div>

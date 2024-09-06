@@ -11,15 +11,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="" for="gradoResponsable"><b>Grado</b></label>
-                        <input type="text" class="form-control" value=""
-                            id="gradoResponsable" name="gradoResponsable" disabled />
+                        <span class="form-control">{{gradoresponsable.grado}} {{gradoresponsable.seccion}}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="" for="cantidadAlumnos"><b>Cantidad de
                                 alumnos</b></label>
-                        <input type="number" class="form-control" value=""
+                        <input type="number" class="form-control" [value]="gradoresponsable.cantidad"
                             id="cantidadAlumnos" name="cantidadAlumnos" disabled />
                     </div>
                 </div>

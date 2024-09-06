@@ -14,7 +14,7 @@ export class AuthLoginPage {
   public isLoggedIn: boolean = true;
 
   public myForm: FormGroup = this.formsBuilder.group({
-    email: ['Julio', [Validators.required]],
+    email: ['Joan', [Validators.required]],
     password: ['123', [Validators.required]]
   })
 

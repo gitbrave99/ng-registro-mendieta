@@ -146,6 +146,32 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr *ngFor="let item of calificacionSociales">
+                                <td>{{item.nombre}}</td>
+                                <td>{{item.calificacion1t1}}</td>
+                                <td>{{item.calificacion1t2}}</td>
+                                <td>{{item.calificacion1t3}}</td>
+                                <td>{{item.totaltrimestre1}}</td>
+                                <td>{{item.asistenciat1}}%</td>
+
+                                <td>{{item.calificacion2t1}}</td>
+                                <td>{{item.calificacion2t2}}</td>
+                                <td>{{item.calificacion2t3}}</td>
+                                <td>{{item.totaltrimestre2}}</td>
+                                <td>{{item.asistenciat2}}%</td>
+                                
+                                <td>{{item.calificacion3t1}}</td>
+                                <td>{{item.calificacion3t2}}</td>
+                                <td>{{item.calificacion3t3}}</td>
+                                <td>{{item.totaltrimestre3}}</td>
+                                <td>{{item.asistenciat3}}%</td>
+                                <td>{{item.notafinal}}%</td>
+
+                                <td>{{item.asistenciat1}}%</td>
+                                <td>{{item.asistenciat1 | calcasistencia:item.asistenciat2:item.asistenciat3}}%</td>
+                                <!-- <td>{{asistenciaFinal(item.asistenciat1,item.asistenciat2,item.asistenciat3)}}%</td> -->
+
+                            </tr>
                         </tbody>
                     </table>
                 </div>

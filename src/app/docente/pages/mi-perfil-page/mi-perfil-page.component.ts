@@ -9,21 +9,22 @@ import { Profesor } from '../../interfaces/Profesor.interface';
 })
 export class MiPerfilPageComponent {
 
-  perfil:Profesor={} as Profesor
+  perfil: Profesor = {} as Profesor
 
   constructor(
-    private docenteService:DocenteService
-  ){
+    private docenteService: DocenteService
+  ) {
     this.cargarPerfil()
   }
 
-  cargarPerfil(){
+  cargarPerfil() {
     this.docenteService.cargarPefil().subscribe({
-      next:(rep)=>{
+      next: (rep) => {
         console.log("perfil ", rep);
-       this.perfil = rep 
+        this.perfil = rep
+        localStorage.setItem('gradoresp', String(rep.dtgradoIdGrado))
       },
-      error:(error)=>{
+      error: (error) => {
         console.error("error", error);
       }
     })

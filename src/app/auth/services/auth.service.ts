@@ -45,7 +45,15 @@ export class AuthService {
     localStorage.removeItem('userlogged');
     localStorage.removeItem('usertype');
     localStorage.removeItem('tokenuser');
+    localStorage.removeItem('gradoresp');
     this.router.navigateByUrl('');
+  }
+
+  getPathProfile(): string {
+    let lstemp= localStorage.getItem("usertype")
+    if (!lstemp) return "auth/login"; 
+    this.getHomePageByUserType(Number(lstemp));
+    return this.pathHomeUser;
   }
 
   getHomePageByUserType(rol:number):void {

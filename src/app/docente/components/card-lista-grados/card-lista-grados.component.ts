@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { GradoCalificar } from '../../interfaces/GradoCalificar.interface';
 
 @Component({
   selector: 'app-card-lista-grados',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './card-lista-grados.component.css'
 })
 export class CardListaGradosComponent {
+
+
+  @Input() gradosCalificar: GradoCalificar[] = [];
+
+  constructor() { }
+
 
 }

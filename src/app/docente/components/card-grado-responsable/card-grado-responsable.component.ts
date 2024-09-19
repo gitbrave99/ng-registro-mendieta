@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { GradoResponsable } from '../../interfaces/GradoResponsable.interface';
 import { DocenteService } from '../../services/docente.service';
+import { ScrollUtils } from '../../../shared/utils/ScrollUtils';
+import { CalificacionEstudiante } from '../../interfaces/CalificacionEstudiante.interface';
 
 @Component({
   selector: 'app-card-grado-responsable',
@@ -8,24 +10,37 @@ import { DocenteService } from '../../services/docente.service';
   styleUrl: './card-grado-responsable.component.css'
 })
 export class CardGradoResponsableComponent {
-  
-  gradoresponsable:GradoResponsable={} as GradoResponsable
+
+  gradoresponsable: GradoResponsable = {} as GradoResponsable
+  idgradoResponsable: number = 0;
+  @Output() onCargarCalificacionesPorGrado= new EventEmitter<number>();
 
   constructor(
-    private docenteService:DocenteService
-  ){
-    this.cargarPerfil()
+    private docenteService: DocenteService
+  ) {
+    this.cargarPerfil();
+    if (localStorage.getItem("gradoresp") != null) {
+      this.idgradoResponsable = Number(localStorage.getItem("gradoresp"))
+      console.log("idgradoResponsable", this.idgradoResponsable);
+
+    }
   }
 
-  cargarPerfil(){
+  cargarPerfil() {
     this.docenteService.cargarGradoResponsagle().subscribe({
-      next:(rep)=>{
+      next: (rep) => {
         console.log("grado responsable ", rep);
-        this.gradoresponsable= rep
+        this.gradoresponsable = rep
       },
-      error:(error)=>{
+      error: (error) => {
         console.error("error", error);
       }
     })
   }
+
+  cargarCalificacionesPorGrado() {
+    this.onCargarCalificacionesPorGrado.emit(3);
+    ScrollUtils.fScrollIntoView("pnllisStudents")
+  }
+
 }

@@ -40,10 +40,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center">5° Grado</td>
-                        <td class="text-center">C</td>
-                        <td class="text-center">34</td>
+
+                    <tr *ngFor="let item of gradosCalificar">
+                        <td class="text-center">{{item.descripcion}}</td>
+                        <td class="text-center">{{item.seccionDescripcion}}</td>
+                        <td class="text-center">{{item.cantidad_alumnos}}</td>
                         <td class="text-center">
                             <a class="btn btn-info btn-sm btnShowAllStudentsByGradeTeacher"
                                 href="#crdregistronotas">
@@ -51,6 +52,8 @@
                             </a>
                         </td>
                     </tr>
+
+                    
                 </tbody>
             </table>
         </div>

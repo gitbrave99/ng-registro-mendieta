@@ -12,6 +12,8 @@ import { MdAgregarAsistenciaComponent } from './components/md-agregar-asistencia
 import { MdImprimirNotasComponent } from './components/md-imprimir-notas/md-imprimir-notas.component';
 import { MdAgregarNotaRecuperacionComponent } from './components/md-agregar-nota-recuperacion/md-agregar-nota-recuperacion.component';
 import { MdAgregarConductaComponent } from './components/md-agregar-conducta/md-agregar-conducta.component';
+import { CalcasistenciaPipe } from '../shared/pipes/calcasistencia.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { MdAgregarConductaComponent } from './components/md-agregar-conducta/md-
   ],
   imports: [
     CommonModule,
-    DocenteRoutingModule
+    DocenteRoutingModule,
+    SharedModule
   ]
 })
 export class DocenteModule { }

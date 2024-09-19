@@ -14,7 +14,7 @@ export class AuthLoginPage {
   public isLoggedIn: boolean = true;
 
   public myForm: FormGroup = this.formsBuilder.group({
-    email: ['Joan', [Validators.required]],
+    email: ['IsaacGo', [Validators.required]],
     password: ['123', [Validators.required]]
   })
 
@@ -68,7 +68,7 @@ export class AuthLoginPage {
       next:(data)=>{
         console.log("data ", data);
         this.isLoggedIn = true;
-        this.router.navigateByUrl(`escuela/${this.authService.pathHomeUser}`);
+        this.router.navigateByUrl(this.authService.pathHomeUser);
         // console.log("ruta: ", `escuela/${this.authService.pathHomeUser}`);
       },error:(error)=>{
         console.log("error LOGIN", error);  

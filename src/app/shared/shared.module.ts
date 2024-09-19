@@ -6,6 +6,7 @@ import { NavbarTopComponent } from './components/navbar-top/navbar-top.component
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { MdConfirmComponent } from './components/md-confirm/md-confirm.component';
+import { CalcasistenciaPipe } from './pipes/calcasistencia.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { MdConfirmComponent } from './components/md-confirm/md-confirm.component
     SidebarComponent,
     NavbarTopComponent,
     HomePageComponent,
-    MdConfirmComponent
+    MdConfirmComponent,
+    CalcasistenciaPipe
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { MdConfirmComponent } from './components/md-confirm/md-confirm.component
   exports:[
     SidebarComponent,
     NavbarTopComponent,
-    HomePageComponent
+    HomePageComponent,
+    CalcasistenciaPipe
   ]
 })
 export class SharedModule { }

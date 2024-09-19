@@ -10,7 +10,7 @@ const routes: Routes = [
     component:AuthLoginPage
   },
   {
-    path:'escuela',
+    path:'',
     component:HomePageComponent,
     children:[
       {

@@ -22,7 +22,6 @@ export class CardGradoResponsableComponent {
     if (localStorage.getItem("gradoresp") != null) {
       this.idgradoResponsable = Number(localStorage.getItem("gradoresp"))
       console.log("idgradoResponsable", this.idgradoResponsable);
-
     }
   }
 
@@ -38,8 +37,8 @@ export class CardGradoResponsableComponent {
     })
   }
 
-  cargarCalificacionesPorGrado() {
-    this.onCargarCalificacionesPorGrado.emit(3);
+  cargarCalificacionesGradoResponsable() {
+    this.onCargarCalificacionesPorGrado.emit(this.idgradoResponsable);
     ScrollUtils.fScrollIntoView("pnllisStudents")
   }
 

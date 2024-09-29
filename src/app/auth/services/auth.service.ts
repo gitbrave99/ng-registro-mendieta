@@ -51,7 +51,7 @@ export class AuthService {
 
   getPathProfile(): string {
     let lstemp= localStorage.getItem("usertype")
-    if (!lstemp) return "auth/login"; 
+    if (!lstemp) return ""; 
     this.getHomePageByUserType(Number(lstemp));
     return this.pathHomeUser;
   }
@@ -68,7 +68,7 @@ export class AuthService {
         this.pathHomeUser= 'admin/mi-perfil';
         break
       default:
-        this.pathHomeUser= 'auth/login';
+        this.pathHomeUser= '';
         break
     }
   }

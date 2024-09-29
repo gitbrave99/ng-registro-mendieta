@@ -46,8 +46,8 @@
                         <td class="text-center">{{item.seccionDescripcion}}</td>
                         <td class="text-center">{{item.cantidad_alumnos}}</td>
                         <td class="text-center">
-                            <a class="btn btn-info btn-sm btnShowAllStudentsByGradeTeacher"
-                                href="#crdregistronotas">
+                            <a class="btn btn-info btn-sm btnShowAllStudentsByGradeTeacher text-white"
+                                (click)="cargarCalificacionesByGrado(item.id_grado)">
                                 Mostrar
                             </a>
                         </td>

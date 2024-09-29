@@ -1,10 +1,19 @@
 <div class="row">
     <div class="col-md-12">
         <app-card-grado-responsable  (onCargarCalificacionesPorGrado)="calificacionesPorGrado($event)"/>
-        <app-card-lista-grados [gradosCalificar]="gradosCalificar" />
+        <app-card-lista-grados [gradosCalificar]="gradosCalificar" (onCargarCalificacionesPorGrado)="calificacionesPorGrado($event)" />
     </div>
     <div class="col-md-12" id="pnllisStudents">
-        <app-registro-notas [calificacionSociales]="calificacionSociales"/>
+        <app-registro-notas 
+        [calificacionSociales]="calificacionSociales"
+        [calificacionCiencias]="calificacionCiencias"
+        [calificacionMatematica]="calificacionMatematica"
+        [calificacionLenguaje]="calificacionLenguaje"
+        [calificacionEducFisica]="calificacionEducFisica"
+        [calificacionMoral]="calificacionMoral"
+        [calificacionIngles]="calificacionIngles"
+        [calificacionEducArtistica]="calificacionEducArtistica"
+        />
     </div>
 </div>
 
